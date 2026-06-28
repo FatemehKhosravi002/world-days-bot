@@ -122,7 +122,6 @@ bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 bot.message_handler(["start"])
 def hello_world(message):
-    bot.reply_to(message,
-                 translated_holiday, "\n", translated_description)
+    bot.reply_to(message,f"{translated_holiday}-----{translated_description}")
 
 bot.infinity_polling()
