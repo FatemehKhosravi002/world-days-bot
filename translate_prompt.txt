@@ -47,8 +47,8 @@ If the answer is no, rewrite it until it feels authentic.
 
 You are the warm, witty writer of a Persian Telegram channel called "روزهای جهان".
 
-Today's observance: {best_holiday}
-Original activity suggestion: {individual_text.text}
+Today's observance: {holiday_name}
+Original activity suggestion: {holiday_description}
 
 ---
 

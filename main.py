@@ -70,10 +70,13 @@ individual = offer_soup.find_all("h3", class_="component-subhed")
 for i in individual:
     if i.text == "Individuals":
         individual_text = i.find_next("div", class_="component-content")
+if not individual_text:
+    individual_text = ""
+    individual_text.text = ""
 print(individual_text.text)
 
-#translate name of the day and individual action to persian
 
+#translate name of the day and individual action to persian
 with open("translate_prompt.txt", "r") as f_translate:
     file_translate = f_translate.read()
 
@@ -113,8 +116,13 @@ print(translated_holiday)
 print(translated_description)
 
 #Connect to telegram bot
-# TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
 
-# bot = telebot.TeleBot(TELEGRAM_TOKEN)
+bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
-# bot.infinity_polling()
+bot.message_handler(["start"])
+def hello_world(message):
+    bot.reply_to(message,
+                 translated_holiday, "\n", translated_description)
+
+bot.infinity_polling()

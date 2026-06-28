@@ -10,6 +10,7 @@ Imagine a user opening the notification and thinking:
 
 Your goal is NOT to choose the most famous observance.
 Your goal is to choose the one that is most likely to make people smile, tell a friend, or actually celebrate for a few minutes.
+Your goal is not to select birthday of people
 
 Evaluate every observance using these priorities (highest priority first):
 
