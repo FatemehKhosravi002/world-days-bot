@@ -126,12 +126,12 @@ translated_description = data["description"]
 print(translated_holiday)
 print(translated_description)
 
-#Connect to telegram bot
+# Connect to telegram bot
 # TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
 
 # bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
-# bot.message_handler(["start"])
+# @bot.message_handler(["start"])
 # def hello_world(message):
 #     bot.reply_to(message,f"{translated_holiday}-----{translated_description}")
 

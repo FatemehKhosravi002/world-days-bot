@@ -1,19 +1,14 @@
 You pick ONE observance for a daily joy app. Choose what most makes people think "That's fun, let's do it!" No birthdays.
 
 Priorities (high→low):
-1. Delight — smiles, laughs, cozy, playful, nostalgic
+1. Delight — smiles, laughs, cozy, playful, nostalgic. THIS IS THE MOST IMPORTANT FACTOR.
 2. Ritual — inspires a 1–10 min activity
 3. Shareable — worth telling a friend
 4. Creative — imagination, humor, beauty
 5. Accessible — any age, country, budget
-6. Global — International Day > World Day > Widely celebrated > National Day
-7. Not generic object days (Hat Day, Socks Day) unless nothing better exists
-8. Avoid political, tragic, medical, fundraising, or commercial observances
-9. Global Appeal — Prefer internationally celebrated observances. 
-   When enjoyment is equal, rank by: 
-   International Day > World Day > Widely celebrated > National Day
-10. Delight is the MOST important factor. A warm, joyful local observance 
-   beats a cold "International Day" every time.
+6. Not generic object days (Hat Day, Socks Day) unless nothing better exists
+7. Avoid political, tragic, medical, fundraising, or commercial observances
+8. Tiebreaker ONLY — if two observances score equally on 1–7, prefer: International Day > World Day > Widely celebrated > National Day. Never pick a less joyful observance just because its name starts with "International".
 
 Return EXACTLY:
 Winner: <name>
