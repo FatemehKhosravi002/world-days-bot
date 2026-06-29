@@ -2,9 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import telebot
+import time
+import requests
 from decouple import config
 
-SELECT_DAY_API_KEY= config("SELECT_DAY_API_KEY")
+OPENROUTER_API= config("OPENROUTER_API")
 
 
 html_text = requests.get("https://nationaltoday.com/").text
@@ -24,22 +26,27 @@ prompt_select_best_day = file.format(
     names=names
 )
 
+
 response = requests.post(
-    url="https://openrouter.ai/api/v1/chat/completions",
+    "https://conduit.ozdoev.net/api/v1/chat/completions",
     headers={
-        "Authorization": f"Bearer {SELECT_DAY_API_KEY}",
+        "Authorization": f"Bearer {OPENROUTER_API}",
         "Content-Type": "application/json",
     },
     json={
-        "model": "openai/gpt-oss-120b:free",
+        "model": "claude-haiku-4-5",
         "messages": [
-            {"role": "user", "content": prompt_select_best_day}
+            {
+                "role": "user",
+                "content": prompt_select_best_day
+            }
         ]
     }
 )
 
 if response.status_code!=200:
     print("API Error")
+    print(response.text)
     exit()
 
 content = response.json()["choices"][0]["message"]["content"]
@@ -86,23 +93,27 @@ translate_prompt = file_translate.format(
 )
 
 
-TRANSLATE_API_KEY=config("TRANSLATE_API_KEY")
+
 translate_response = requests.post(
-    url="https://openrouter.ai/api/v1/chat/completions",
+    "https://conduit.ozdoev.net/api/v1/chat/completions",
     headers={
-        "Authorization": f"Bearer {TRANSLATE_API_KEY}",
+        "Authorization": f"Bearer {OPENROUTER_API}",
         "Content-Type": "application/json",
     },
     json={
-        "model": "openai/gpt-oss-120b:free",
+        "model": "claude-haiku-4-5",
         "messages": [
-            {"role": "user", "content": translate_prompt}
+            {
+                "role": "user",
+                "content": translate_prompt
+            }
         ]
     }
 )
 
 if translate_response.status_code!=200:
     print("API Error")
+    print(translate_response.text)
     exit()
 
 translated_text = translate_response.json()["choices"][0]["message"]["content"]
@@ -116,12 +127,12 @@ print(translated_holiday)
 print(translated_description)
 
 #Connect to telegram bot
-TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
+# TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
 
-bot = telebot.TeleBot(TELEGRAM_TOKEN)
+# bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
-bot.message_handler(["start"])
-def hello_world(message):
-    bot.reply_to(message,f"{translated_holiday}-----{translated_description}")
+# bot.message_handler(["start"])
+# def hello_world(message):
+#     bot.reply_to(message,f"{translated_holiday}-----{translated_description}")
 
-bot.infinity_polling()
+# bot.infinity_polling()

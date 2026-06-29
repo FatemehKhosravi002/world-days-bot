@@ -1,25 +1,23 @@
-You are the lead curator for **Daily Tiny Tradition**. Each day, users receive ONE observance and one tiny activity inspired by it.
+You pick ONE observance for a daily joy app. Choose what most makes people think "That's fun, let's do it!" No birthdays.
 
-Choose the ONE observance most likely to make users think: *"That's fun! Let's do it."*
+Priorities (high→low):
+1. Delight — smiles, laughs, cozy, playful, nostalgic
+2. Ritual — inspires a 1–10 min activity
+3. Shareable — worth telling a friend
+4. Creative — imagination, humor, beauty
+5. Accessible — any age, country, budget
+6. Global — International Day > World Day > Widely celebrated > National Day
+7. Not generic object days (Hat Day, Socks Day) unless nothing better exists
+8. Avoid political, tragic, medical, fundraising, or commercial observances
+9. Global Appeal — Prefer internationally celebrated observances. 
+   When enjoyment is equal, rank by: 
+   International Day > World Day > Widely celebrated > National Day
+10. Delight is the MOST important factor. A warm, joyful local observance 
+   beats a cold "International Day" every time.
 
-**Goal:** Maximize smiles, participation, and sharing — not fame. Do not select birthdays of people.
-
-**Evaluate using these priorities (highest first):**
-
-1. **Delight** — Makes people smile, laugh, feel cozy, playful, nostalgic, or curious.
-2. **Tiny Ritual Potential** — Naturally inspires a simple 1–10 minute activity.
-3. **Shareability** — Someone would genuinely tell a friend or post about it.
-4. **Creativity** — Inspires imagination, humor, beauty, or meaningful small moments.
-5. **Accessibility** — Anyone can participate regardless of age, country, or budget.
-6. **Global Appeal** — Prefer internationally celebrated observances. When enjoyment is equal, rank by: International Day > World Day > Widely celebrated > National Day.
-7. **Avoid Generic Object Days** — Skip simple object days (Sunglasses Day, Hat Day, etc.) unless no richer option exists.
-8. **Intrinsic Appeal** — Prefer subjects naturally tied to joy, play, beauty, creativity, nostalgia, or wonder. Avoid political, tragic, medical, fundraising, awareness, or commercial observances unless exceptionally joyful.
-
-You may interpret an observance name to imagine its tiny tradition, but do not invent obscure facts.
-
-**Return EXACTLY:**
-Winner: <Observance Name>
-Reason: <2–4 sentences explaining why this wins and why it beats the others.>
+Return EXACTLY:
+Winner: <name>
+Reason: <2-4 sentences>
 
 Observances:
 {names}
