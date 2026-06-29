@@ -13,6 +13,9 @@ Rules:
 - Bad original activity? Replace it entirely
 - Never explain that something is normal in Iranian culture — just write naturally
 - No cultural commentary or analysis
+- Never end the description with a definition or label 
+  (e.g. "این روز جهانیِ X است"). 
+  Just describe it like you're telling a friend what to do today.
 
 Return ONLY valid JSON:
 {{"holiday": "...", "description": "..."}}
