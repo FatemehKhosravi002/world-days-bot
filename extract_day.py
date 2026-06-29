@@ -1,10 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import json
-import telebot
-import time
 import requests
 from decouple import config
+
 
 OPENROUTER_API= config("OPENROUTER_API")
 
@@ -126,13 +125,5 @@ translated_description = data["description"]
 print(translated_holiday)
 print(translated_description)
 
-# Connect to telegram bot
-# TELEGRAM_TOKEN = config("TELEGRAM_TOKEN")
-
-# bot = telebot.TeleBot(TELEGRAM_TOKEN)
-
-# @bot.message_handler(["start"])
-# def hello_world(message):
-#     bot.reply_to(message,f"{translated_holiday}-----{translated_description}")
-
-# bot.infinity_polling()
+with open("name_of_the_day.txt", "w") as f:
+    file = f.write(f"translated_holiday={translated_holiday}\ntranslated_description={translated_description}")
